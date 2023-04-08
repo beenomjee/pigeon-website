@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-container {
+  width: 100%;
+  position: relative;
+}
+.carousel-container .corousel-items {
+  width: 100%;
+  aspect-ratio: 4/1;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container .corousel-items .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: calc((var(--pos) - 1) * 100%);
+  top: 0;
+  transition: left 0.5s ease;
+}
+.carousel-container .corousel-items .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-container > button {
+  border: none;
+  background: transparent;
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 10%;
+  cursor: pointer;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+}
+.carousel-container > button.prev {
+  left: 0;
+}
+.carousel-container > button.prev:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+}
+.carousel-container > button.next {
+  right: 0;
+}
+.carousel-container > button.next:hover {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+}
+.carousel-container > .indicators {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.carousel-container > .indicators > button {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+.carousel-container > .indicators > button.active {
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 3.5rem;
+  background-color: #056839;
+}
+header .left ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  font-size: 2rem;
+}
+header .left ul li a {
+  color: whitesmoke;
+}
+header .right a {
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 2rem;
+}
+
+main {
+  padding: 5rem 3rem 3rem;
+}
+main > h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+}
+main > .topButtons {
+  padding: 5rem 0rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > .topButtons > a {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  border: 0.1rem solid #056738;
+}
+main > .topButtons > a:nth-child(1) {
+  color: #056738;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+main > .topButtons > a:nth-child(2) {
+  background-color: #056738;
+  color: whitesmoke;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+main > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main > table thead tr th {
+  font-size: 1rem;
+  background-color: #ffea76;
+  border: 0.1rem solid #ddd;
+  font-size: 1.8rem;
+  color: #333333;
+  padding: 0.5rem;
+}
+main > table thead tr th:nth-child(1) {
+  width: 7%;
+}
+main > table thead tr th:nth-child(2) {
+  width: 3%;
+}
+main > table thead tr th:nth-child(3) {
+  width: 27%;
+}
+main > table thead tr th:nth-child(4) {
+  width: 19%;
+}
+main > table thead tr th:nth-child(5) {
+  width: 25%;
+}
+main > table thead tr th:nth-child(6) {
+  width: 19%;
+}
+main > table tbody tr td {
+  border: 0.1rem solid #ddd;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+main > table tbody tr td > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main > table tbody tr td.name {
+  text-align: left;
+}
+main > table tbody tr td.name span:nth-child(1) {
+  font-weight: bold;
+}
+main > table tbody tr td:last-child {
+  font-weight: bold;
+}
+main > table tbody tr:nth-child(odd) {
+  background-color: #ecf0f5;
+}
+
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
